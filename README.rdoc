@@ -1,0 +1,19 @@
+= Delayed Job Admin
+
+Simple admin interface for Delayed::Job (http://rubygems.org/gems/delayed_job)
+
+= Installation
+
+Add the following to your Gemfile:
+- gem "delayed_job_admin"
+
+Setup authentication:
+- ...
+
+= TODO
+
+- index
+- show
+- destroy
+- restart
+- require admin login
