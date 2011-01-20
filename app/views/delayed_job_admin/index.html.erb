@@ -3,6 +3,7 @@
 <table id="jobs">
   <thead>
     <tr>
+      <th>id</th>
       <th>priority</th>
       <th>attempts</th>
       <th>handler</th>
@@ -18,10 +19,11 @@
   <tbody>
     <% Delayed::Job.all.reverse.each do |job| %>
       <tr class="job" id="job-<%= job.id %>">
+        <td><%= job.id %></td>
         <td><%= job.priority %></td>
         <td><%= job.attempts %></td>
-        <td><%= truncate(job.handler || 'nil', :length => 50).gsub('---', '') %></td>
-        <td><%= truncate(job.last_error || 'nil', :length => 50) %></td>
+        <td><%= truncate(job.handler || '-', :length => 40).gsub('--- !', '') %></td>
+        <td><%= truncate(job.last_error || '-', :length => 40) %></td>
         <td><%= job.run_at.present? ? job.run_at.to_s(:short) : '-' %></td>
         <td><%= job.locked_at.present? ? job.locked_at.to_s(:short) : '-' %></td>
         <td><%= job.failed_at.present? ? job.failed_at.to_s(:short) : '-' %></td>
