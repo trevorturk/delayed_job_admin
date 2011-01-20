@@ -1,6 +1,6 @@
 = Delayed Job Admin
 
-Simple admin interface for Delayed::Job (http://rubygems.org/gems/delayed_job)
+Simple admin interface for the Delayed::Job gem
 
 = Usage
 
@@ -13,17 +13,31 @@ Simple admin interface for Delayed::Job (http://rubygems.org/gems/delayed_job)
 
 - Setup authentication:
 
-    # todo
+  - Define a delayed_job_admin_authentication method in ApplicationController:
 
-- View the admin interface
+    # app/controllers/application_controller.rb
+
+    def delayed_job_admin_authentication
+      # authentication_logic_goes_here
+    end
+
+  - For example, if you are using the Devise gem and have an Admin model:
+
+    # app/controllers/application_controller.rb
+
+    def delayed_job_admin_authentication
+      authenticate_admin!
+    end
+
+- View the admin interface:
 
     open http://localhost:3000/delayed_job_admin
 
 = Todo
 
 x index
+x require admin login, docs
 - show
 - destroy
 - restart
 - restart all
-- require admin login, docs

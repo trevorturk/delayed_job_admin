@@ -6,8 +6,13 @@ class NavigationTest < ActiveSupport::IntegrationCase
     Delayed::Job.delete_all
   end
 
-  test "truth" do
+  test "dummy rails app" do
     assert_kind_of Dummy::Application, Rails.application
+  end
+
+  test "index if not authorized" do
+    visit delayed_job_admin_path(:unauthorized => true)
+    assert_match 'unauthorized', page.body
   end
 
   test "index with no jobs" do
