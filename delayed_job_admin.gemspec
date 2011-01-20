@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Trevor Turk"]
   s.email       = ["trevorturk@gmail.com"]
-  s.homepage    = "http://rubygems.org/gems/delayed_job_admin"
+  s.homepage    = "https://github.com/trevorturk/delayed_job_admin"
   s.summary     = %q{Simple admin interface for the Delayed::Job gem}
-  s.description = %q{Simple admin interface for the Delayed::Job gem}
+  s.description = %q{Simple admin interface for the Delayed::Job gem...}
 
   s.rubyforge_project = "delayed_job_admin"
 
