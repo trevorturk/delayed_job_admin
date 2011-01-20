@@ -1,3 +1,10 @@
+PATH
+  remote: .
+  specs:
+    delayed_job_admin (0.0.1)
+      delayed_job
+      rails
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -103,8 +110,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara (>= 0.4.0)
+  capybara
   delayed_job
+  delayed_job_admin!
   launchy
-  rails (= 3.0.3)
+  rails
   sqlite3-ruby
