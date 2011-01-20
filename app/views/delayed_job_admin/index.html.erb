@@ -29,6 +29,29 @@
         <td><%= job.created_at.to_s(:short) %></td>
         <td><%= job.updated_at.to_s(:short) %></td>
       </tr>
+      <tr class="job-details" id="job-details-<%= job.id %>">
+        <td colspan="10"><p><pre><%= job.to_yaml %></pre></p></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
+
+<script>
+  $(document).ready(function(){
+
+    $(".job").hover(
+      function () {
+        $(this).css("cursor", "pointer");
+        $(this).addClass("hover");
+      },
+      function () {
+        $(this).removeClass("hover");
+      }
+    );
+
+    $(".job").click(function(event){
+      $(this).next("tr").toggle();
+    });
+
+  });
+</script>

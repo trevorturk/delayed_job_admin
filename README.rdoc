@@ -41,7 +41,7 @@ MIT License - Copyright (c) 2011 Trevor Turk and CaptainU
 
 x index
 x require admin login, docs
-- show
+x show
 - destroy
 - restart
 - restart all
