@@ -3,7 +3,7 @@ require 'test_helper'
 class NavigationTest < ActiveSupport::IntegrationCase
 
   setup do
-    Delayed::Job.destroy_all
+    Delayed::Job.delete_all
   end
 
   test "truth" do
