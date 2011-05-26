@@ -33,6 +33,11 @@ Simple admin interface for the Delayed::Job gem
 
     open http://localhost:3000/delayed_job_admin
 
+= Contributing
+
+bundle install
+bundle exec rake
+
 = License
 
 MIT License - Copyright (c) 2011 Trevor Turk and CaptainU
